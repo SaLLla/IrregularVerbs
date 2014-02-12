@@ -1,0 +1,72 @@
+﻿@model IrregularVerbs.Models.IrregularVerb
+@{
+    ViewBag.Title = "Добавить слово";
+}
+<h2>
+    Пожалуйста, введите информацию во все поля.</h2>
+@using (@Html.BeginForm("AddVerb", "Home", FormMethod.Post, new { autocomplete = "off" }))
+{
+    <div class="style-for-label">
+        @Html.LabelFor(m => m.LessonNumber)<br />
+    </div>
+    <div class="style-for-editor">
+        @Html.EditorFor(m => m.LessonNumber)
+    </div>
+    <div class="style-for-validation-message">
+        @Html.ValidationMessageFor(m => m.LessonNumber)
+    </div>
+    
+
+    <br />
+    <div class="style-for-label">
+        @Html.LabelFor(m => m.PresentSimple)<br />
+    </div>
+    <div class="style-for-editor">
+        @Html.EditorFor(m => m.PresentSimple)
+    </div>
+    <div class="style-for-validation-message">
+        @Html.ValidationMessageFor(m => m.PresentSimple)
+    </div>
+    
+
+    <br />
+    <div class="style-for-label">
+        @Html.LabelFor(m => m.PastSimple)<br />
+    </div>
+    <div class="style-for-editor">
+        @Html.EditorFor(m => m.PastSimple)
+    </div>
+    <div class="style-for-validation-message">
+        @Html.ValidationMessageFor(m => m.PastSimple)
+    </div>
+    
+    
+    <br />
+    <div class="style-for-label">
+        @Html.LabelFor(m => m.PastParticiple)<br />
+    </div>
+    <div class="style-for-editor">
+        @Html.EditorFor(m => m.PastParticiple)
+    </div>
+    <div class="style-for-validation-message">
+        @Html.ValidationMessageFor(m => m.PastParticiple)
+    </div>
+    
+
+    <br />
+    <div class="style-for-label">
+        @Html.LabelFor(m => m.Translate)<br />
+    </div>
+    <div class="style-for-editor">
+        @Html.EditorFor(m => m.Translate)
+    </div>
+    
+    <div class="style-for-validation-message">
+        @Html.ValidationMessageFor(m => m.Translate)
+    </div>
+    
+
+    <br />
+    <button class="btn-style">
+        Сохранить слово</button>
+}

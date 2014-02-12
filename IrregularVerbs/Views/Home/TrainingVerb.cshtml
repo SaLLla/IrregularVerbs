@@ -1,0 +1,51 @@
+﻿@model IrregularVerbs.Models.TrainingVerb
+@{
+    ViewBag.Title = "Тренировка";
+}
+
+@using (Html.BeginForm("TrainingVerb", "Home", new { numberVerb = Model.NumberVerb  }, FormMethod.Post, new {autocomplete = "off"}))
+{
+    
+
+        <div class="number-verb">
+            Слово
+            @Html.DisplayFor(model => model.NumberVerb) /
+            @Html.DisplayFor(model => model.AmountOfWords)</div>
+        @Html.HiddenFor(model => model.PresentSimpleHide)
+        @Html.HiddenFor(model => model.PastSimpleHide)
+        @Html.HiddenFor(model => model.PastParticipleHide)
+        <div class="style-for-label">
+            @Html.LabelFor(model => model.Translate)
+        </div>
+        <div class="translate">
+            @Html.DisplayFor(model => model.Translate)
+        </div>
+        
+        <br />
+        <div class="style-for-label">
+            @Html.DisplayNameFor(model => model.PresentSimpleShow)
+        </div>
+        <div class="style-for-editor">
+            @Html.EditorFor(model => model.PresentSimpleShow)
+        </div>
+        
+        <br />
+        <div class="style-for-label">
+            @Html.DisplayNameFor(model => model.PastSimpleShow)
+        </div>
+        <div class="style-for-editor">
+            @Html.EditorFor(model => model.PastSimpleShow)
+        </div>
+        
+        <br />
+        <div class="style-for-label">
+            @Html.DisplayNameFor(model => model.PastParticipleShow)
+        </div>
+        <div class="style-for-editor">
+            @Html.EditorFor(model => model.PastParticipleShow)
+        </div>
+        
+        <br />
+        <button class="btn-style">
+            Проверить</button>
+}

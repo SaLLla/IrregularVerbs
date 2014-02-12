@@ -1,0 +1,158 @@
+﻿body
+{
+    font-size: .85em;
+    font-family: "Segoe UI" , Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-image: url("../../Content/themes/base/images/824772783.jpg");
+}
+.layout
+{
+    width: 890px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: auto;
+    background-color: #5ab8ef;
+    position: relative;
+}
+
+.wrap
+{
+    padding-bottom: 50px;
+}
+
+.footer
+{
+    background-color: #1D6C9B;
+    color: #fff;
+    position: relative;
+    left: 697px;
+    display: inline-block;
+    height: 50px;
+    padding: 0 10px;
+    margin-top: -50px;
+    margin-bottom: 10px;
+}
+h2
+{
+    color: #19768e;
+    text-align: center;
+}
+
+.style-for-label
+{
+    text-align: center;
+    font-size: 19px;
+    font-family: Verdana, Arial, Sans-Serif;
+    font-weight: bold;
+    color: #1D6C9B;
+}
+
+.style-for-editor input
+{
+    font-size: 20px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.style-for-editor
+{
+    text-align: center;
+}
+
+.style-for-validation-message
+{
+    text-align: center;
+    font-size: 13px;
+}
+
+.number-verb
+{
+    margin: 20px 30px 0;
+    font-size: 15px;
+    font-family: Arial, Sans-Serif;
+}
+
+.translate
+{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: #094365;
+}
+
+.congratulation
+{
+    font-size: 19px;
+    padding-left: 30px;
+}
+
+
+ul.menu
+{
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #1D6C9B;
+}
+.menu li
+{
+    margin: 0;
+    padding: 10px 15px;
+    list-style: none;
+    display: inline;
+    font-size: 20px;
+}
+.menu li:hover
+{
+    background-color: #3a91c5;
+}
+.menu a
+{
+    text-decoration: none;
+    color: #fff;
+}
+.drop-down-list
+{
+    text-align: center;
+}
+
+.drop-down-list select
+{
+    text-align: center;
+    font-size: 28px;
+    color: Gray;
+    margin-bottom: 15px;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #f00;
+}
+
+.field-validation-valid
+{
+    display: none;
+    background-color: #21b317;
+    color: #811312;
+}
+
+.input-validation-error
+{
+    border: 2px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}

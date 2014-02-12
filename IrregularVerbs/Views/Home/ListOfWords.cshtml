@@ -1,0 +1,53 @@
+﻿@model IEnumerable<IrregularVerbs.Models.IrregularVerb>
+@{
+    ViewBag.Title = "Список слов";
+}
+<h2>
+    На этой странице показаны все слова, которые были добавлены на изучение</h2>
+<div class="dictionary">
+    <table class="simple-little-table" cellspacing="0">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().LessonNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().PresentSimple)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().PastSimple)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().PastParticiple)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Translate)
+            </th>
+        </tr>
+        @foreach (IrregularVerbs.Models.IrregularVerb verb in ViewBag.IrregularVerbs)
+        {
+            <tr>
+                <td>@Html.Label(verb.LessonNumber.ToString())
+                </td>
+                <td>@Html.Label(verb.PresentSimple)
+                </td>
+                <td>@Html.Label(verb.PastSimple)
+                </td>
+                <td>@Html.Label(verb.PastParticiple)
+                </td>
+                <td>@Html.Label(verb.Translate)
+                </td>
+                <td class="hideBackground">
+                    <a href="@Url.Action("Edit", new { id = verb.Id })">
+                        <img src="../../Content/themes/base/images/pencil_9335_min.png" alt="Редактировать"
+                            title="Редактировать" /></a>
+                </td>
+                <td class="hideBackground">
+                    <a href="@Url.Action("Delete", new { id = verb.Id })">
+                        <img src="../../Content/themes/base/images/deletered_7070_min.png" alt="Удалить"
+                            title="Удалить" />
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

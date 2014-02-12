@@ -1,0 +1,19 @@
+﻿@model IrregularVerbs.Models.SelectNumberLesson
+@Scripts.Render("~/scripts/jquery-1.7.1.js")
+@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+@{
+    ViewBag.Title = "Тренировка";
+}
+<h2>
+    Выберите, пожалуйста, номер урока</h2>
+
+@using (@Html.BeginForm("ShowWordsSelectedLesson", "Home"))
+{
+    <div class="drop-down-list">
+        @Html.DropDownListFor(model => model.LessonNumber, Model.LessonNumber)
+    </div>
+    <div class="submit">
+        <button class="btn-style">Ok</button>
+    </div>
+    
+}

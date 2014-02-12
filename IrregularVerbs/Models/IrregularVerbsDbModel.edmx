@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IrregularVerbsDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="IrregularVerbsDbModelStoreContainer">
+          <EntitySet Name="IrregularVerbs" EntityType="IrregularVerbsDbModel.Store.IrregularVerbs" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="IrregularVerbs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PresentSimple" Type="text" Nullable="false" />
+          <Property Name="PastSimple" Type="text" Nullable="false" />
+          <Property Name="PastParticiple" Type="text" Nullable="false" />
+          <Property Name="Translate" Type="text" Nullable="false" />
+          <Property Name="LessonNumber" Type="int" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IrregularVerbsDbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="IrregularVerbsDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IrregularVerbs" EntityType="IrregularVerbsDbModel.IrregularVerb" />
+        </EntityContainer>
+        <EntityType Name="IrregularVerb">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PresentSimple" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="PastSimple" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="PastParticiple" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Translate" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="LessonNumber" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IrregularVerbsDbModelStoreContainer" CdmEntityContainer="IrregularVerbsDbEntities">
+          <EntitySetMapping Name="IrregularVerbs">
+            <EntityTypeMapping TypeName="IrregularVerbsDbModel.IrregularVerb">
+              <MappingFragment StoreEntitySet="IrregularVerbs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PresentSimple" ColumnName="PresentSimple" />
+                <ScalarProperty Name="PastSimple" ColumnName="PastSimple" />
+                <ScalarProperty Name="PastParticiple" ColumnName="PastParticiple" />
+                <ScalarProperty Name="Translate" ColumnName="Translate" />
+                <ScalarProperty Name="LessonNumber" ColumnName="LessonNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="IrregularVerbsDbModel">
+        <EntityTypeShape EntityType="IrregularVerbsDbModel.IrregularVerb" Width="1.5" PointX="0.75" PointY="0.75" Height="2.172587890625" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

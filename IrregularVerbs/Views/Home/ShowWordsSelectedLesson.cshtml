@@ -1,0 +1,36 @@
+﻿@model IEnumerable<IrregularVerbs.Models.IrregularVerb>
+@{
+    ViewBag.Title = "SelectLesson";
+}
+<h2>
+    Список тренируемых слов</h2>
+@using (@Html.BeginForm("TrainingVerb", "Home", new { numberVerb = 0 }))
+{
+    <table class="simple-little-table" cellspacing="0">
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.First().Translate)
+            </th>
+            <th>@Html.DisplayNameFor(m => m.First().PresentSimple)
+            </th>
+            <th>@Html.DisplayNameFor(m => m.First().PastSimple)
+            </th>
+            <th>@Html.DisplayNameFor(m => m.First().PastParticiple)
+            </th>
+        </tr>
+        @foreach (var verb in Model)
+        {
+            <tr>
+                <td>@Html.Label(verb.Translate)
+                </td>
+                <td>@Html.Label(verb.PresentSimple)
+                </td>
+                <td>@Html.Label(verb.PastSimple)
+                </td>
+                <td>@Html.Label(verb.PastParticiple)
+                </td>
+            </tr>
+        }
+    </table>
+
+    <button class="btn-style">Тренировать</button>
+}

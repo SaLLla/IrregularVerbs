@@ -1,0 +1,42 @@
+﻿@model IrregularVerbs.Models.IrregularVerb
+@{
+    ViewBag.Title = "Редактирование слова";
+    
+}
+<h2>
+    Редактирование слова</h2>
+@using (@Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.LessonNumber)
+            </th>
+            <th>@Html.DisplayNameFor(model => model.PresentSimple)
+            </th>
+            <th>@Html.DisplayNameFor(model => model.PastSimple)
+            </th>
+            <th>@Html.DisplayNameFor(model => model.PastParticiple)
+            </th>
+            <th>@Html.DisplayNameFor(model => model.Translate)
+            </th>
+        </tr>
+        <tr>
+            <td>@Html.EditorFor(model => model.LessonNumber)
+                @Html.ValidationMessageFor(m => m.LessonNumber)
+            </td>
+            <td>@Html.EditorFor(model => model.PresentSimple)
+                @Html.ValidationMessageFor(model => model.PresentSimple)
+            </td>
+            <td>@Html.EditorFor(model => model.PastSimple)
+                @Html.ValidationMessageFor(model => model.PastSimple)
+            </td>
+            <td>@Html.EditorFor(model => model.PastParticiple)
+                @Html.ValidationMessageFor(model => model.PastParticiple)
+            </td>
+            <td>@Html.EditorFor(model => model.Translate)
+                @Html.ValidationMessageFor(model => model.Translate)
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Сохранить изменения" />
+}
